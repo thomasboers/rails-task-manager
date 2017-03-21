@@ -1,0 +1,11 @@
+<%= form_for(@task) do |f| %>
+<%= f.label :description, "which task do you want to edit?" %>
+<%= f.text_field :description %>
+
+<%= f.label :status, "To do", value: false %>
+<%= f.radio_button :status, false, :value =>false %>
+<%= f.label :status, "Done", value: true %>
+<%= f.radio_button :status, true, :value =>true %>
+
+<%= f.submit %>
+<% end %>
